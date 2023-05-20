@@ -1,9 +1,4 @@
-let url = window.location;
-let url_s = url.href.search("/#")
-if(url_s != '-1'){
-    let url_is = url.href.split('/#')
-    url = url_is[0];
-}
+const url = window.origin;
 
 const project_html = (dat)=>{
     return `<div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -11,7 +6,7 @@ const project_html = (dat)=>{
         <img class="img-fluid" src="karikatur-assets/foto/${dat.image}" alt="">
         <div class="position-relative p-4 pt-0">
             <h4 class="mb-3 mt-3">${dat.title}</h4>
-            <p>${dat.desk}</p>
+            <h6 class="text-primary">${dat.desk}</h6>
         </div>
     </div>
 </div>`;
@@ -46,13 +41,14 @@ $.ajax({
 });
 
 const testi_html = (dat)=>{
-    return `<div class="testimonial-item text-center">
-    <div class="col-lg-4 col-md-6 portfolio-item first">
-        <div class="portfolio-img rounded overflow-hidden">
-            <img class="img-fluid" src="karikatur-assets/foto/${dat.image}" alt="">
-        </div>
-    </div>
-</div>`;
+    let idd = dat.image.replaceAll(".","").replaceAll(" ","_")
+    return `<li id="carousel__slide1"
+    tabindex="0"
+    class="carousel__slide">
+  <div class="carousel__snapper">
+      <img class="img-fluid" src="karikatur-assets/foto/${dat.image}" alt="">
+  </div>
+</li>`;
 }
 
 $.ajax({
@@ -64,3 +60,7 @@ $.ajax({
         });
     }
 });
+
+$('img').on('click', function(){
+    alert($(this).attr('src'))
+})
