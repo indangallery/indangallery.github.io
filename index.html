@@ -404,7 +404,15 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+       $(document).ready(function(){
+            let browser = navigator.userAgent;
+            $.get('https://data.intana.my.id/api/landingpageview?browser='+browser, function(data){
+                console.log(data);
+            });
+        });
 
+    </script>
 </body>
 
 </html>
