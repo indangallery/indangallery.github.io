@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+    <title>IndanGallery</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="official website inndangallery nganjuk, edit karikatur, edit sketsa, edit karikatur keluarga, karikatur manten."/>
+    <meta name="twitter:site" content="@indangallery">
+    <meta property="og:title" content="IndanGallery Official">
+    <meta property="og:url" content="//flutter.dev/">
+    <meta property="og:description" content="website official IndanGallery naganjuk">
+    <meta property="og:image" content="https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png">
+    <meta name="google-site-verification" content="HFqxhSbf9YA_0rBglNLzDiWnrHiK_w4cqDh2YD2GEY4" />
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet" media="all">
+    <script async defer src="/assets/js/all.js" data-auto-replace-svg="nest"></script>
+    <script>
+      if (window.innerWidth < 768) {
+          console.log('is mobile!');
+          window.location.href = '/';
+      } else {
+          console.log('Is desktop!');
+      }
+    </script>
+  </head>
+  <body class="home" x-data="ScrollSpy" x-on:scroll.window="onScroll" x-bind:class="{ 'in-content': $store.spy.inContent }">
+<header role="banner" x-data="Header()" x-bind:class="{ 'hide': !navOpen && $store.spy.inHomeHero, 'mobile': isMobile, 'mobile-nav-open': navOpen,  'searching': searchActive, }" x-on:resize.window.debounce.200="onResize">
+  <div class="content">
+    <div>
+      <div class="logo logo-white">
+        <a href="/">
+          <img src="/assets/img/log.png" alt="IndanGallery>" />
+        </a>
+      </div>
+      <div class="logo logo-normal">
+        <a href="/">
+          <img src="/assets/img/log.png" alt="IndanGallery" />
+        </a>
+      </div>
+    </div>
+    <div class="tray">
+      <div class="icon-btn search" x-bind:class="{ 'active': searchActive || navOpen }" >
+        <i class="fas fa-search search-icon" @click="toggleSearch($event)"> </i>
+          <form action="https://docs.flutter.dev/search">
+            <input type="search" placeholder="Search..." aria-label="Search" name="q" id="q" autocomplete="off" />
+          </form>
+        <i class="fas fa-times" @click="toggleSearch($event)" x-show="searchActive" > </i>
+      </div>
+
+      <a href="https://api.whatsapp.com/send?phone=6282139152703&text=Kak%20mau%20pesan%20karikatur" target="_blank" id="get-started__header" class="btn" >Info Pemensanan</a>
+      <div class="icon-btn hamburger" x-show="!navOpen" @click="toggleMobileNav" >
+        <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="icon-btn close" x-show="navOpen" @click="toggleMobileNav">
+        <i class="fas fa-times fa-lg"></i>
+      </div>
+    </div>
+  </div>
+  <style>
+    .gambar-outline {
+        outline: 5px solid rgb(255, 255, 255); /* Warna dan ketebalan outline dapat disesuaikan */
+    }
+  </style>
+</header>
+<main>
+      
+<section class="hero" x-data="initSpy(86, hideShowHeaderHome)">
+
+  <div class="container">
+    <h1>IndanGallery Edit & Cetak</h1>
+    <div class="gallery">
+      <div class="inner-fixed">
+        <div class="col col-outer col-left">
+          <div class="card card-a gambar-outline"
+            style="background-image:url(/assets/img/5932d4e90754eb6996bb.jpg)">
+          </div>
+          <div class="card card-b gambar-outline"
+            style="background-image:url(/assets/img/32c264af3b738a0d5a5e.jpg)">
+          </div>
+          <div class="card card-c gambar-outline"
+            style="background-image:url(/assets/img/42b50a45c3cfd815e2aa.jpg)">
+          </div>
+        </div>
+        <div class="col col-center">
+          <div class="card card-a gambar-outline"
+            style="background-image:url(/assets/img/90e34daecca082eb9b28.jpg)">
+          </div>
+        </div>
+        <div class="col col-outer col-right">
+          <div 
+            class="card card-a gambar-outline"
+            style="background-image:url(/assets/img/7c827ed46aa7efe0109b.jpg)">
+          </div>
+          <div 
+            class="card card-b gambar-outline"
+            style="background-image:url(/assets/img/4e15fea30ba9d8a14208.jpg)">
+          </div>
+          <div 
+            class="card card-c gambar-outline"
+            style="background-image:url(/assets/img/389ff8f9e4d6becae73a.jpg)">
+          </div>
+          <div 
+            class="card card-d gambar-outline"
+            style="background-image:url(/assets/img/b8bd15d096f0557123b1.jpg)">
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Apakah Anda ingin membuat momen pernikahan atau kenangan spesial Anda menjadi lebih unik dan berkesan? Kami beri solusi untukmu.</h2>
+    <a id="get-started__home-hero-bottom" href="https://api.whatsapp.com/send?phone=6282139152703&text=Kak%20mau%20pesan%20karikatur" target="_blank" class="btn white">Info Pemensanan</a>
+  </div>
+</section>
+<section class="content-container" x-data="initSpy(headerOffset, toggleContentActive)">
+
+<section id="notification" class="module">
+  <div class="notification container">
+    <div class="notification-message">
+      <img src="/assets/img/toa.png" alt="Notification">
+        <a href="https://flutter.dev/consultants/" target="_blank">
+          Kami punya banyak tema yang cocok untukmu! Kami update jika ada tema terbaru. Lihat tema terbaru kami..
+          &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+        </a>
+    </div>
+    <div class="notification-nav">
+        <span class="active"><a href="#"></a></span>
+    </div>
+  </div>
+</section>
+  
+<section id="tabs" class="module" x-data="initSpy(-300)">
+  <div class="tabs container" x-data="Tabs">
+    <div class="tabs-header">
+      <h2>Ada beberapa jenis editing yang kami tawarkan untuk anda. Munkgin jika ada konsep atau permintaan lain silahkan sampaikan ke admin, kami siap membantu.</h2>
+      <div class="tabs-menu">
+        <ul x-ref="tabs">
+          <li class="btn" @click="selectTab($event, 'karikatur')">Karikatur</li>
+          <li class="btn" @click="selectTab($event, 'sketsa')">Sketsa</li>
+          <li class="btn" @click="selectTab($event, 'kolase')">Kolase</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tabs-content" x-ref="contents">
+      <div class="tab-content" x-ref="karikatur">
+        <div class="media">
+          <img src="/assets/kategori/karikatur.jpg" alt="Fast">
+        </div>
+        <div class="text">
+          <h3 class="text-green">Karikatur</h3>
+          <p>Dengan editing karikatur membuat moment perniakahan atau kenangan spesial menjadi lebih unik.</p>
+          <a class="btn" href="https://api.whatsapp.com/send?phone=6282139152703&text=Kak%20mau%20pesan%20karikatur" target="_blank">Klik untuk pesan karikatur</a>
+        </div>
+      </div>
+      <div class="tab-content" x-ref="sketsa">
+        <div class="media">
+          <img src="/assets/kategori/sketsa.jpg" alt="Productive">
+        </div>
+        <div class="text">
+          <h3 class="text-violet">Sketsa</h3>
+          <p>Suka yang klasik? Dengan editing sketsa membuat momen bahagia menjadi lebih estetik.</p>
+          <a class="btn" href="https://api.whatsapp.com/send?phone=6282139152703&text=Kak%20mau%20pesan%20sketsa" target="_blank">Klik untuk pesan sketsa</a>
+        </div>
+      </div>
+      <div class="tab-content" x-ref="kolase">
+        <div class="media">
+          <img src="/assets/kategori/kolase.jpg" alt="Flexible">
+        </div>
+        <div class="text">
+          <h3 class="text-coral">Kolase</h3>
+          <p>Punya banyak foto? Dengan editing kolase membuat banyak moment anda akan menjadi satu kolase yang unik.</p>
+          <a class="btn" href="https://api.whatsapp.com/send?phone=6282139152703&text=Kak%20mau%20pesan%20kolase" target="_blank">Klik untuk pesan kolase</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="featured">
+    <div class="features container">
+      <div class="feature nospy">
+        <div class="text">
+          <hgroup>
+            <h4 class="eyebrow text-blue">Kualitas Cetak</h4>
+            <h3>Dengan printing Ultra Violet</h3>
+          </hgroup>
+          <p>Untuk warna yang lebih cerah dan berkesan, kami menggunakan printing Ultra Violet.</p>
+          <a class="btn" href="https://www.instagram.com/stories/highlights/17884774685863198/" target="_blank">Lihat proses print</a>
+        </div>
+        <div class="media">
+          <img alt="Multi-Platform" src="/assets/img/ed2e069ee37807f5975a.jpg" style="border-radius: 20px;">
+        </div>
+      </div>
+      <div class="feature reverse nospy">
+        <div class="text">
+          <hgroup>
+            <h4 class="eyebrow text-green">Packing Aman</h4>
+            <h3>Gratis packing bublewrap</h3>
+          </hgroup>
+          <p>Dengan packing bublewrap, anda akan merasa aman dan nyaman.</p>
+          <a class="btn" href="https://www.instagram.com/indangallery_id/" target="_blank">Lihat di instagram</a>
+        </div>
+        <div class="media">
+          <img alt="Developer Experience" src="/assets/img/75c5b74c32dfd7b7e8f3.jpg">
+        </div>
+      </div>
+      <div class="feature nospy"> 
+        <div class="text">
+          <hgroup>
+            <h4 class="eyebrow text-coral">Kualitas &amp; Kepercayaan</h4>
+            <h3>Kepuasan anda adalah prioritas kami.</h3>
+          </hgroup>
+          <p>Dengan kualitas dan kepercayaan yang baik, kami akan memberikan pelayanan terbaik.</p>
+          <a class="btn" href="https://www.instagram.com/indangallery_id/" target="_blank">Lihat di instagram</a>
+        </div>
+        <div class="media">
+          <img alt="Ecosystem" src="/assets/img/75c5b74c32dfd7b7easdd8f3.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br/>
+  <section id="developer-story" class="module">
+    <div class="insert developer-story-insert container">
+      <div class="text">
+        <h4 class="eyebrow">Peringatan</h4>
+        <h3>Demi menghindari kejahatan siber yang marak terjadi kami beritahukan lebih lanjut</h3>
+        <a href="https://www.instagram.com/indangallery_id/" target="_blank" class="btn quiet collapsed">Buka instagram kami 
+          &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+        </a>
+      </div>
+      <div class="media">
+        <img src="/assets/img/17b428191082bb916954.png" alt="Google Pay Developer Story">
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  
+
+
+
+</section>
+
+
+  <!-- <script src="assets/js/rss-parser.min.js"></script> -->
+
+
+    </main>
+    
+    
+
+<footer>
+  <div class="content footer-main">
+    <div class="logo">
+      <a href="/">
+        <img src="/assets/img/log.png" width="154" alt="Flutter"/>
+      </a>
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li>Layanan kami</li>
+        <li> 
+          <a href="javascript:void(0);">Karikatur</a>
+        </li>
+        <li> 
+          <a href="javascript:void(0);">Sketsa</a>
+        </li>
+        <li> 
+          <a href="javascript:void(0);">Kolase</a>
+        </li>
+        <li> 
+          <a href="javascript:void(0);">Polaroid</a>
+        </li>
+      </ul>
+      <ul>
+        <li>Kontak Kami</li>
+        <li>
+          <a href="javascript:void(0);" >Phone: 6282139152703</a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" >Phone: 6285157377405</a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" >Email: indangallery@gmail.com</a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" >Email: thedanufirda@gmail.com</a>
+        </li>
+      </ul>
+      <ul>
+        <li>Sosial Media</li>
+        <li><a href="https://www.instagram.com/indangallery_id/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100090029933045" target="_blank">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
+
+    <section class="cookie-snack" x-data="CookieSnack" x-bind:class="{ 'show': !agreed }">
+  <div class="container">
+    <p>Google uses cookies to deliver its services, to personalize ads, and to analyze traffic. You can 
+      adjust your privacy controls anytime in your 
+      <a href="https://myaccount.google.com/data-and-personalization" target="_blank" rel="noopener">Google settings</a>. 
+      <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Learn more</a>.
+    </p>
+    <button @click.prevent="consent" class="solid">Okay</button>
+  </div>
+</section>
+
+    <section class="cookie-snack" x-data="Snack" x-bind:class="{ 'show': !agreed && window.location.href.includes('consultants') }">
+    <div class="container">
+      <p>NOTICE: Flutter hopes this directory is useful for customers seeking consultants with Flutter experience; however, Flutter makes no representation to you or anyone else that the listed consultants are Flutter or Google partners, and Flutter does not represent or warrant their qualifications or the quality of services you may receive.  Your relationship is strictly between you and the consultants.</p>
+      <button @click.prevent="dismiss" class="solid">Okay</button>
+    </div>
+  </section>
+  
+
+    
+  <script src="/assets/js/storage-main.js"></script>
+  
+  </body>
+</html>
